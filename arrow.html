@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 이름 없는 익명 함수
+        const arrow = () => {
+            alert("이름이 없는 화살표 함수")
+        }
+
+        arrow();
+
+        // confirm은 확인을 누르면 true, 취소를 누르면 false를 return
+        let ret = confirm("비가 오나요?")
+        // 조건에 사용할 때 '== true'는 생략해도 됨.
+        // !ret를 조건에 사용하면 ret일 때의 false를 생략할 수도 있음.
+        if (ret) { // 'r == true'와 동일
+            document.write("비가 옴")
+        }
+        else {
+            document.write("비가 오지 않음")
+        }
+
+        let park = "name = 종호"
+        // 이름에서 한글로 적힌 부분이 encoding 됨. 영어는 유지
+        let encodedPark = encodeURI(park);
+        alert(encodedPark)
+        // 인코딩을 해제하려면 다시 decode
+        alert(decodeURI(encodedPark))
+    </script>
+    
+</body>
+</html>

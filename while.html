@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        // 스크립트를 여러번 출력하기(기본)
+        document.write("hello world" + "<br/>")
+        document.write("hello world" + "<br/>")
+        document.write("hello world" + "<br/>")
+        document.write("hello world" + "<br/>")
+
+        // 반복문으로 스크립트 출력
+        // 이 방식을 주로 사용하는데 그 이유는 코드의 재사용 및 유지보수 때문
+        // 재사용이라는 이유를 빼면 위의 기본 방식이 더 빠름
+        let index = 0
+        while(index < 4) {
+            document.write("hello world" + "<br/>")
+            index++
+        }
+        */
+       
+        // 0, 1, 3, 6, 10과 4, 3, 2, 1, 0 출력하기
+        let index = 0
+        let result = 0
+        while(index < 5) {
+            document.write(result + " " + (4 - index) + "<br/>")
+            index++
+            result += index
+        }
+
+
+    </script>
+    
+</body>
+</html>

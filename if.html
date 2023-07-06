@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If</title>
+    <script>
+        let score = 83;
+        let testMessage;
+
+        // 80 이상이면 합격, 미만이면 불합격
+        if (score >= 80) {
+            //document.write("합격" + "<br />")
+            // let를 붙이면 지역변수로 생성되므로 블록 외부에서 사용 불가능
+            // var를 사용한 변수는 global이므로 사용 가능
+            var testscore1 = 60
+            let testscore2 = 70
+            testMessage = "합격"
+        }
+        else {
+            //document.write("불합격" + "<br />")
+            testMessage = "불합격"
+        }
+        document.write(testMessage + "<br />")
+        /*
+        document.write(testscore1)
+        document.write(testscore2)
+        */
+
+        /*
+        //80 이상이면 우수, 그렇지 않고 60 이상이면 보통, 0 ~ 59면 미달
+        if (score >= 80 & score <= 100) {
+            testMessage = "우수"            
+        } else if (score >= 60 && score < 80) {
+            testMessage = "보통"            
+        } else if (score >= 0 && score < 60) {
+            testMessage = "미달"
+        } else {
+            testMessage = "잘못된 점수"
+        }
+        document.write(testMessage + "<br />")
+        */
+
+        // year가 윤년인지 판별하여 맞으면 윤년이라고 출력하기
+        // 윤년은 아래 두 조건 중 하나만 만족하면 됨
+        // 1) 4의 배수이고 100의 배수는 아닌 경우
+        // 2) 400의 배수인 경우
+        let year = 2023;
+        let yearMessage
+        // 숫자 계산이 bool 판별 보다 우선이고 and가 or 보다 우선
+        // if와 else if를 1줄로 합치는 것도 가능
+        if ((year % 4 == 0) && (year % 100 != 0)) {
+            yearMessage = "윤년임"            
+        } else if (year % 400 == 0 ) {
+            yearMessage = "윤년임"            
+        } else {
+            yearMessage = "윤년 아님"
+        }
+        document.write(year + "년은 " + yearMessage)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

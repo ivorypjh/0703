@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <script>
+        // 함수 작성
+        function function1(){
+            document.write("hello" + "<br/>")
+        }
+
+        let function2 = function(){
+            document.write("hello" + "<br/>")
+        }
+
+        //함수 호출
+        function1(); // 별도의 메모리 공간을 할당 받아서 function1의 기능을 수행
+        function2(); // function2라는 함수를 호출(call)
+        //document.write(typeof(function2))
+
+        // 매개변수(argument)
+        // 매개변수가 없는 함수
+        let noArgumentFunction = function(){
+            for(let i = 0; i < 5; i++){
+                document.write(i + "<br/>")
+            }
+        }
+
+        // 매개변수를 사용하는 함수        
+        let argumentFunction = function(count){
+            // count 변수를 인자로 받아서 count 횟수만큼 출력
+            for(let i = 0; i < count; i++){
+                document.write(i + "<br/>")
+            }
+        }
+
+        // 함수 호출
+        noArgumentFunction();
+        let count = 7
+        argumentFunction(count);
+        argumentFunction(); // 작업을 수행하지 못함. 매개변수가 없으면 undefined.
+
+        let addIntegerWithInteger = function(Int1, Int2){
+            let result = Int1 + Int2
+            document.write(Int1 + " + " + Int2 + " = ", Int1 + Int2, "<br/>")
+            // return이 없는 경우 맨 마지막에 return이 있는 것으로 간주.
+            return result
+        }
+        let result = addIntegerWithInteger(100, 200) // 결과를 return
+        // return 하는 경우 그 결과를 재사용할 수 있음.
+        document.write(result + "<br/>")
+        document.write(addIntegerWithInteger(111, 222))
+        document.write("<br/>")
+        result1 = addIntegerWithInteger(result, 400)
+        document.write(result1 + "<br/>")
+        // 원본 데이터에 다시 저장하는 것에 주의
+        //result = addIntegerWithInteger(result, 400)
+        //document.write(result + "<br/>")
+
+        // 매개변수는 뒤에서부터 생략 가능
+        // 생략하면 undefined 가 대입됨. 언어마다 다름.
+        //addIntegerWithInteger(100)
+
+    </script>
+    
+</body>
+</html>

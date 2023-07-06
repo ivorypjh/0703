@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For</title>
+</head>
+<body>
+    <script>
+        // while처럼 사용
+        // index의 선언이 for 안에서 이루어짐
+        // 첫번째와 세번째의 식에는 여러 문장을 사용할 수 있음
+        // ; 가 아니라 , 를 사용해서 각 문장을 구분
+        for(let index = 0, test = 0; index < 5; index++, test++){
+            document.write("index는 " + (index + test) + "<br/>")
+        }
+
+        let arr = ["1", "아", "a"];
+        for( index in arr){
+    	document.write(index + " "); // 0, 1, 2
+    	document.write(arr[index] + "<br/>"); // 1, 아, a
+}
+    </script>
+    
+</body>
+</html>

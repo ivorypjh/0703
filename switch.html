@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        // 값에 의해 분기하는 switch. 숫자와 문자열 가능.
+        let type = "해";
+        switch(type){
+            case "비":
+                document.write(type);
+                break; // break가 없으면 break를 만날 때까지 진행
+            case "구름":
+                document.write(type);
+                break;
+            default:
+                document.write("없는 날씨!");
+                //default는 마지막이므로 break 필요 없음.
+        }
+        */
+
+        // switch를 if 구문처럼 활용하기
+        // 이렇게 구현할거면 if로 하는게 더 간결하기에 권장하는 방식은 아님
+        let score = 68;
+        switch(true) {
+            case score >= 80 && score <= 100:
+                document.write(score+ "(은)는 합격")
+                break;
+            case score >= 60 && score < 80:
+                document.write(score+ "(은)는 우수")
+                break;
+            default:
+                document.write("불합격")
+        }
+    </script>
+    
+</body>
+</html>
